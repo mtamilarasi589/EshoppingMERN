@@ -75,7 +75,8 @@ function App() {
                       <Route path='/orders' element={<ProtectedRoute><UserOrders/></ProtectedRoute> } />
                       <Route path='/order/:id' element={<ProtectedRoute><OrderDetail/></ProtectedRoute> } />
                       {stripeApiKey && <Route path='/payment' element={<ProtectedRoute><Elements stripe={loadStripe(stripeApiKey)}><Payment/></Elements></ProtectedRoute> } />
-} 
+}                 
+
                   </Routes>
                 </div>
                 {/* Admin Routes */}
